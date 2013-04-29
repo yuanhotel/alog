@@ -115,14 +115,21 @@ public class AlogPrefsActivity extends PreferenceActivity implements
 	}
 
 	private void setLevelTitle() {
-		level.setTitle("Level? (" + mPrefs.getLevel().getTitle(this) + ")");
+		level.setTitle(getRes(R.string.level)
+				+ mPrefs.getLevel().getTitle(this) + ")");
 	}
 
 	private void setFormatTitle() {
-		format.setTitle("Format? (" + mPrefs.getFormat().getTitle(this) + ")");
+		format.setTitle(getRes(R.string.format)
+				+ mPrefs.getFormat().getTitle(this) + ")");
 	}
 
 	private void setBufferTitle() {
-		buffer.setTitle("Buffer? (" + mPrefs.getBuffer().getTitle(this) + ")");
+		buffer.setTitle(getRes(R.string.buffer)
+				+ mPrefs.getBuffer().getTitle(this) + ")");
+	}
+
+	private String getRes(int id) {
+		return getResources().getString(id) + " (";
 	}
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">日志跟踪</string>
+    <string name="logger">日志</string>
+    <string name="autosave">自动保存</string>
+    <string name="developer">开发者选项</string>
+    <string name="netDebug">网络调试</string>
+    <string name="level">级别?</string>
+    <string name="format">格式化?</string>
+    <string name="buffer">缓存?</string>
+    
+    <string name="fatal_title">Fatal</string>
+    <string name="error_title">Error</string>
+    <string name="warn_title">Warning</string>
+    <string name="info_title">Information</string>
+    <string name="verbose_title">Verbose</string>
+    <string name="debug_title">Debug</string>
+    <string name="main_title">Main</string>
+    <string name="events_title">Events</string>
+    <string name="radio_title">Radio</string>
+    <string name="brief_title">Brief</string>
+    <string name="process_title">Process</string>
+    <string name="tag_title">Tag</string>
+    <string name="thread_title">Thread</string>
+    <string name="raw_title">Raw</string>
+    <string name="time_title">Time</string>
+    <string name="long_title">Long</string>
+    <string name="threadtime_title">Thread Time</string>
+    <string name="about">关于</string>
+    <string name="about_title">关于作者</string>
+    <string name="about_message">这个程序是Anroid的开发人员提供方便！ \n 作者: yuanhotel</string>
+
+</resources>
