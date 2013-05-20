@@ -9,7 +9,11 @@
     <string name="level">级别?</string>
     <string name="format">格式化?</string>
     <string name="buffer">缓存?</string>
-    
+    <string name="autosave_summary">自动将日志保存到一个文件中</string>
+    <string name="level_summary">设置保存日志的级别</string>
+    <string name="format_summary">设置保存日志的格式</string>
+    <string name="buffer_summary">设置保存日志的缓冲区</string>
+    <string name="about_summary">作者: yuanhotel</string>
     <string name="about">关于</string>
     <string name="about_title">关于版本</string>
     <string name="about_message">这个程序是Android的开发人员提供方便！ \n1，选中自动保存，会将日志保存到存储卡上\n2，选中网络调试，在电脑上执行命令(adb connect ip),就会连接到android设备\n 作者: yuanhotel</string>

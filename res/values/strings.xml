@@ -10,6 +10,12 @@
     <string name="format">Format?</string>
     <string name="buffer">Buffer?</string>
     
+    <string name="autosave_summary">Automatically save the log to a file.</string>
+    <string name="level_summary">Log level used to display log entries.</string>
+    <string name="format_summary">Log format to use when displaying log entries.</string>
+    <string name="buffer_summary">Log buffer to display.</string>
+    <string name="about_summary">Author: yuanhotel</string>
+    
     <string name="fatal_title">Fatal</string>
     <string name="error_title">Error</string>
     <string name="warn_title">Warning</string>
