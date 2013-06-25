@@ -18,13 +18,20 @@ import com.yutel.alog.comm.Prefs;
 
 public class LogServer {
 	private static LogServer mLogServer;
+	private static final SimpleDateFormat LOG_FILE_FORMAT;
+	private static final File path;
+
 	private Prefs mPrefs;
-	static final SimpleDateFormat LOG_FILE_FORMAT = new SimpleDateFormat(
-			"yyyy-MM-dd-HH-mm-ssZ");
-	final File path = new File(Environment.getExternalStorageDirectory(),
-			"alog");
 	BufferedWriter bw;
 	Process proc;
+
+	static {
+		LOG_FILE_FORMAT = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ssZ");
+		path = new File(Environment.getExternalStorageDirectory(), "alog");
+		if (path != null && !path.exists()) {
+			path.mkdir();
+		}
+	}
 
 	private LogServer(Context context) {
 		mPrefs = new Prefs(context);
@@ -33,6 +40,7 @@ public class LogServer {
 	public static LogServer getInstance(Context context) {
 		if (mLogServer == null) {
 			mLogServer = new LogServer(context);
+
 		}
 		return mLogServer;
 	}
@@ -52,15 +60,15 @@ public class LogServer {
 				@Override
 				public void readLine(String line) {
 					try {
-						bw.write(line+"\n");
+						bw.write(line + "\n");
 					} catch (IOException e) {
-						Log.e(Comm.TAG, "error reading log", e);
+						Log.e(Comm.TAG, "error write log", e);
 					}
 				}
 			});
 			print.start();
 		} catch (IOException e) {
-			Log.e(Comm.TAG, "error reading log", e);
+			Log.e(Comm.TAG, "error create log file", e);
 		}
 	}
 
